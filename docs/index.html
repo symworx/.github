@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="SymWorx — modeling, analysis, and simulation with a Rust kernel and Python bindings."
+    />
+    <title>SymWorx</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230d1117'/%3E%3Cpath d='M8 22 L16 8 L24 22 Z' fill='none' stroke='%2358a6ff' stroke-width='2'/%3E%3Ccircle cx='16' cy='18' r='2' fill='%233fb950'/%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <div class="bg" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="./">SymWorx</a>
+      <nav>
+        <a href="https://github.com/symworx/symworx">GitHub</a>
+        <a href="#crates">Crates</a>
+        <a class="btn" href="https://github.com/symworx/symworx#readme">Get started</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="eyebrow">Open source · Rust + Python</p>
+        <h1>
+          Isolated environments for<br />
+          <span class="gradient">modeling &amp; simulation</span>
+        </h1>
+        <p class="lede">
+          SymWorx is a multi-use computational framework with a Rust kernel and
+          Python bindings — built for security, robustness, and portability from
+          microcontrollers to the cloud. Open development lives in a single
+          monorepo.
+        </p>
+        <div class="cta-row">
+          <a class="btn primary" href="https://github.com/symworx/symworx">View on GitHub</a>
+          <a class="btn ghost" href="https://github.com/symworx/symworx#readme">README</a>
+        </div>
+      </section>
+
+      <section class="pillars" aria-label="Principles">
+        <article>
+          <h2>Security</h2>
+          <p>
+            Minimize unsafe code, reduce unintended execution paths, and lower
+            supply-chain risk.
+          </p>
+        </article>
+        <article>
+          <h2>Robustness</h2>
+          <p>
+            Predictable behavior, strong typing, and explicit error handling
+            across the stack.
+          </p>
+        </article>
+        <article>
+          <h2>Scalability</h2>
+          <p>
+            Consistent APIs for embedded, desktop, scientific, and educational
+            workloads.
+          </p>
+        </article>
+      </section>
+
+      <section class="projects" id="crates">
+        <div class="section-head">
+          <h2>Crates</h2>
+          <p>
+            Domain and foundation crates inside
+            <a href="https://github.com/symworx/symworx">symworx/symworx</a>.
+          </p>
+        </div>
+        <ul class="project-grid">
+          <li>
+            <a href="https://github.com/symworx/symworx/tree/main/crates/symworx-biosym">
+              <span class="name">symworx-biosym</span>
+              <span class="tag">biology · biomechanics</span>
+              <span class="desc"
+                >Physiological signals (PPG, respiration), gait analysis, and
+                central pattern generators.</span
+              >
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/symworx/symworx/tree/main/crates/symworx-loadsym">
+              <span class="name">symworx-loadsym</span>
+              <span class="tag">training load</span>
+              <span class="desc"
+                >Training load, periodization, ACWR/TSS, monotony/strain, and
+                nutrition modeling.</span
+              >
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/symworx/symworx/tree/main/crates/symworx-spatialsym">
+              <span class="name">symworx-spatialsym</span>
+              <span class="tag">spatial analysis</span>
+              <span class="desc"
+                >Sport-agnostic 2D trajectory analysis and post-hoc spatial
+                decision modeling.</span
+              >
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/symworx/symworx/tree/main/crates/symworx-dynamics">
+              <span class="name">symworx-dynamics</span>
+              <span class="tag">nonlinear dynamics</span>
+              <span class="desc"
+                >RQA, embedding, entropy, DMD, Koopman/EDMD, and LTI
+                control tools.</span
+              >
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/symworx/symworx/tree/main/crates/symworx-signal">
+              <span class="name">symworx-signal</span>
+              <span class="tag">signal processing</span>
+              <span class="desc"
+                >Filters, peaks, sparse sensing, interpolation, and
+                resampling.</span
+              >
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/symworx/symworx/tree/main/crates/symworx-core">
+              <span class="name">symworx-core</span>
+              <span class="tag">foundation</span>
+              <span class="desc"
+                >Core re-exports and shared utilities across the simulation
+                crates.</span
+              >
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/symworx/symworx/tree/main/crates/symworx-tui">
+              <span class="name">symworx-tui</span>
+              <span class="tag">symview</span>
+              <span class="desc"
+                >Terminal UI for biosignal exploration, dynamics, and load
+                analysis.</span
+              >
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/symworx/symworx/tree/main/crates/symworx-io">
+              <span class="name">symworx-io</span>
+              <span class="tag">I/O</span>
+              <span class="desc"
+                >Canonical I/O for biosignals and activity data (CSV, Parquet,
+                FIT, email).</span
+              >
+            </a>
+          </li>
+        </ul>
+        <p class="more-crates">
+          Also in the monorepo:
+          <a href="https://github.com/symworx/symworx/tree/main/crates/symworx-loadsym-db">loadsym-db</a>,
+          <a href="https://github.com/symworx/symworx/tree/main/crates/symworx-stats">stats</a>,
+          <a href="https://github.com/symworx/symworx/tree/main/crates/symworx-math">math</a>,
+          <a href="https://github.com/symworx/symworx/tree/main/crates/symworx-embed">embed</a>,
+          <a href="https://github.com/symworx/symworx/tree/main/crates/symworx-backend">backend</a>,
+          <a href="https://github.com/symworx/symworx/tree/main/crates/symworx-error">error</a>,
+          and
+          <a href="https://github.com/symworx/symworx/tree/main/bindings/python">Python bindings</a>.
+        </p>
+      </section>
+
+      <section class="community" id="contributors">
+        <h2>Contributors</h2>
+        <p>
+          SymWorx is developed with contributions from organizations building
+          tools for performance, modeling, and systems work.
+        </p>
+        <ul class="contributor-list">
+          <li>
+            <a href="https://www.PalEmDynamics.com" rel="noopener noreferrer"
+              >PalEm Dynamics</a
+            >
+            <span class="url">www.PalEmDynamics.com</span>
+          </li>
+          <li>
+            <a href="https://www.cSYMd.com" rel="noopener noreferrer">cSYMd</a>
+            <span class="url">www.cSYMd.com</span>
+          </li>
+        </ul>
+        <p class="community-note">
+          Community defaults (contributing, security, support) live in the
+          organization
+          <a href="https://github.com/symworx/.github">.github</a> repository.
+        </p>
+        <div class="cta-row">
+          <a class="btn ghost" href="https://github.com/symworx/.github/blob/main/.github/CONTRIBUTING.md"
+            >Contributing</a
+          >
+          <a class="btn ghost" href="https://github.com/symworx/.github/blob/main/.github/SECURITY.md"
+            >Security</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        <a href="https://github.com/symworx/symworx">github.com/symworx/symworx</a>
+        · Apache-2.0
+      </p>
+    </footer>
+  </body>
+</html>
