@@ -98,8 +98,29 @@ main {
   padding: 0 1.5rem 4rem;
 }
 
+.release-banner {
+  margin: 0.5rem 0 0;
+  padding: 0.85rem 1.1rem;
+  border: 1px solid rgba(210, 153, 34, 0.45);
+  border-radius: var(--radius);
+  background: rgba(210, 153, 34, 0.1);
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.release-banner strong {
+  color: #e3b341;
+  font-weight: 600;
+}
+
+.release-banner a {
+  color: var(--link);
+  white-space: nowrap;
+}
+
 .hero {
-  padding: 3.5rem 0 3rem;
+  padding: 2.25rem 0 3rem;
 }
 
 .eyebrow {
@@ -128,15 +149,74 @@ main {
 
 .lede {
   max-width: 38rem;
-  margin: 0 0 1.75rem;
+  margin: 0 0 1.25rem;
   color: var(--muted);
   font-size: 1.1rem;
+}
+
+.focus-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1.75rem;
+  padding: 0;
+}
+
+.focus-tags span {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  background: rgba(22, 27, 34, 0.8);
+}
+
+.focus {
+  margin-bottom: 2.5rem;
+}
+
+.focus-pillars {
+  margin-bottom: 0;
 }
 
 .cta-row {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
+}
+
+.tui-callout {
+  margin-bottom: 2.5rem;
+}
+
+.tui-callout h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.35rem;
+}
+
+.tui-callout > p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  max-width: 42rem;
+}
+
+.code-block {
+  margin: 0 0 1.25rem;
+  padding: 0.85rem 1rem;
+  overflow-x: auto;
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--text);
+  background: rgba(13, 17, 23, 0.7);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.code-block code {
+  font-family: inherit;
 }
 
 .btn {

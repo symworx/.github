@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="SymWorx — modeling, analysis, and simulation with a Rust kernel and Python bindings."
+      content="SymWorx — physiological and biomechanical analysis, nonlinear dynamics, and embedded systems. Rust kernel with Python bindings."
     />
     <title>SymWorx</title>
     <link rel="stylesheet" href="styles.css" />
@@ -17,12 +17,21 @@
       <a class="brand" href="./">SymWorx</a>
       <nav>
         <a href="https://github.com/symworx/symworx">GitHub</a>
+        <a href="#focus">Focus</a>
         <a href="#crates">Crates</a>
         <a class="btn" href="https://github.com/symworx/symworx#readme">Get started</a>
       </nav>
     </header>
 
     <main>
+      <aside class="release-banner" role="status">
+        <strong>First public release pending.</strong>
+        The monorepo and APIs are under active development; packaging, docs, and
+        stability guarantees for a public release are not final yet.
+        <a href="https://github.com/symworx/symworx">Watch the monorepo</a> for
+        updates.
+      </aside>
+
       <section class="hero">
         <p class="eyebrow">Open source · Rust + Python</p>
         <h1>
@@ -30,14 +39,79 @@
           <span class="gradient">modeling &amp; simulation</span>
         </h1>
         <p class="lede">
-          SymWorx is a multi-use computational framework with a Rust kernel and
-          Python bindings — built for security, robustness, and portability from
-          microcontrollers to the cloud. Open development lives in a single
-          monorepo.
+          SymWorx is a modular computational framework with a Rust kernel and
+          Python bindings — for mathematical signal processing, nonlinear
+          dynamics, and simulation. Explore data interactively with the
+          <strong>terminal UI (TUI)</strong> — <strong>symview</strong> —
+          for biosignals, dynamics workflows, and training load. Built for
+          security, robustness, and portability from microcontrollers to the
+          cloud.
+        </p>
+        <p class="focus-tags" aria-label="Focus areas">
+          <span>Physiological &amp; biomechanical</span>
+          <span>Nonlinear dynamics</span>
+          <span>Embedded systems</span>
+          <span>TUI · symview</span>
         </p>
         <div class="cta-row">
           <a class="btn primary" href="https://github.com/symworx/symworx">View on GitHub</a>
           <a class="btn ghost" href="https://github.com/symworx/symworx#readme">README</a>
+        </div>
+      </section>
+
+      <section class="focus" id="focus" aria-label="Focus areas">
+        <div class="section-head">
+          <h2>Focus</h2>
+          <p>
+            Dynamical systems theory and rigorous signal methods as usable
+            pipelines — inspectable, extensible, and ready for noisy field data
+            and constrained devices.
+          </p>
+        </div>
+        <div class="pillars focus-pillars">
+          <article>
+            <h2>Physiological &amp; biomechanical</h2>
+            <p>
+              Biosignals (PPG, respiration), gait and movement modeling, central
+              pattern generators, training load and multi-source performance
+              time series, and spatial trajectory analysis.
+            </p>
+          </article>
+          <article>
+            <h2>Nonlinear dynamics</h2>
+            <p>
+              RQA/CRQA, entropy and complexity measures, embedding, DMD and
+              Koopman methods, plus signal foundations — filters, peaks, sparse
+              sensing, and resampling.
+            </p>
+          </article>
+          <article>
+            <h2>Embedded systems</h2>
+            <p>
+              Portable engines for microcontrollers and bare-metal, host-side
+              streaming (serial / simulators), and the same methods via Python
+              for research and rapid prototyping.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="community tui-callout" id="tui" aria-label="Terminal UI">
+        <h2>Terminal UI · symview</h2>
+        <p>
+          Day-to-day interactive work runs through the
+          <strong>TUI</strong> crate <code>symworx-tui</code> (binary
+          <code>symview</code>): convert and load physiological signals,
+          visualize in the terminal, explore nonlinear dynamics (including RQA),
+          and run LoadSym workflows for workouts and trends.
+        </p>
+        <pre class="code-block"><code>cargo run -p symworx-tui --bin symview</code></pre>
+        <div class="cta-row">
+          <a
+            class="btn ghost"
+            href="https://github.com/symworx/symworx/tree/main/crates/symworx-tui"
+            >symworx-tui docs</a
+          >
         </div>
       </section>
 
@@ -137,10 +211,10 @@
           <li>
             <a href="https://github.com/symworx/symworx/tree/main/crates/symworx-tui">
               <span class="name">symworx-tui</span>
-              <span class="tag">symview</span>
+              <span class="tag">TUI · symview</span>
               <span class="desc"
-                >Terminal UI for biosignal exploration, dynamics, and load
-                analysis.</span
+                >Interactive terminal UI (symview): load and visualize
+                biosignals, run RQA/dynamics, and LoadSym workout analysis.</span
               >
             </a>
           </li>
@@ -175,6 +249,10 @@
           tools for performance, modeling, and systems work.
         </p>
         <ul class="contributor-list">
+          <li>
+            <a href="https://github.com/ntberry" rel="noopener noreferrer">ntberry</a>
+            <span class="url">github.com/ntberry</span>
+          </li>
           <li>
             <a href="https://www.PalEmDynamics.com" rel="noopener noreferrer"
               >PalEm Dynamics</a
