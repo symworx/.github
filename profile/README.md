@@ -14,7 +14,7 @@ Open development lives in a single monorepo (default branch **`develop`**):
 
 ## Focus
 
-SymWorx turns dynamical systems theory, rigorous signal methods, and classical data-driven models into **usable computational pipelines** — tools you can inspect, extend, and run under real constraints of noise, latency, and power.
+We put dynamical systems methods, signal processing, and classical ML into one inspectable stack you can run in research workflows and on constrained hardware. 
 
 ### Physiological & biomechanical analysis and simulation
 
