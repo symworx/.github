@@ -4,6 +4,9 @@ Thanks for your interest in contributing. These guidelines apply to
 [symworx/symworx](https://github.com/symworx/symworx) unless that repository
 provides its own `CONTRIBUTING.md`.
 
+> **Note:** The first public release is pending. The monorepo may still be
+> private; contribution paths open fully when the repository is public.
+
 ## Ways to contribute
 
 - Report bugs and request features with the issue templates
@@ -20,10 +23,11 @@ provides its own `CONTRIBUTING.md`.
 ## Development workflow
 
 1. Fork [symworx/symworx](https://github.com/symworx/symworx) (or use a branch if you have write access).
-2. Create a focused branch: `fix/short-description` or `feat/short-description`.
-3. Prefer small, reviewable commits with clear messages.
-4. Run the monorepo tests and linters before opening a PR (see its `README.md` / `DEVELOPMENT.md`).
-5. Open a pull request against `main`.
+2. Base work on the default branch **`develop`** (not `main`).
+3. Create a focused branch: `fix/short-description` or `feat/short-description`.
+4. Prefer small, reviewable commits with clear messages.
+5. Run the monorepo tests and linters before opening a PR (see its `README.md` / `DEVELOPMENT.md`).
+6. Open a pull request against **`develop`**.
 
 ## Pull requests
 

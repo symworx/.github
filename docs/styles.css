@@ -202,6 +202,25 @@ main {
   max-width: 42rem;
 }
 
+.workflow-list {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+  color: var(--muted);
+  max-width: 42rem;
+}
+
+.workflow-list li {
+  margin-bottom: 0.4rem;
+}
+
+.workflow-list strong {
+  color: var(--text);
+}
+
+.focus-pillars {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
 .code-block {
   margin: 0 0 1.25rem;
   padding: 0.85rem 1rem;

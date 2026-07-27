@@ -13,11 +13,12 @@ prefer the latest release line unless maintainers state otherwise.
 Please report vulnerabilities privately using one of these methods:
 
 1. **GitHub Security Advisories** (preferred)  
-   On [symworx/symworx](https://github.com/symworx/symworx):
-   **Security → Report a vulnerability**.
+   On [symworx/symworx](https://github.com/symworx/symworx) when the
+   repository is available: **Security → Report a vulnerability**.
 
 2. **Organization contact**  
-   Contact an organization owner via GitHub if private reporting is unavailable.
+   Contact an organization owner via GitHub if private reporting is unavailable
+   or the monorepo is not yet public.
 
 Include as much detail as you can:
 

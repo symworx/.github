@@ -1,31 +1,29 @@
 # SymWorx
 
-> **First public release pending.** The monorepo and APIs are under active development; packaging, docs, and stability guarantees for a public release are not final yet. Watch [symworx/symworx](https://github.com/symworx/symworx) for updates.
+> **First public release pending.** The monorepo and APIs are under active development; packaging, docs, and stability guarantees for a public release are not final yet. The product repository will open with the first public release — follow [github.com/symworx](https://github.com/symworx) for updates.
 
 ### Isolated environments for modeling, analysis & simulation
 
-**SymWorx** is a modular open-source computational framework with a **Rust kernel** and **Python bindings**. It provides an isolated, high-assurance environment for mathematical signal processing, nonlinear dynamics, and simulation — consistent from research notebooks to edge devices.
+**SymWorx** is a modular computational stack for **biosignal analysis**, **training load**, **nonlinear dynamics**, and **classical ML** — with a **Rust kernel**, **Python bindings**, and a keyboard-driven terminal UI (**`symview`**).
 
-Interactive exploration is first-class via the **terminal UI (TUI)** — **`symview`** (`symworx-tui`) — for selecting, converting, and visualizing biosignals, running nonlinear-dynamics workflows (e.g. RQA), and analyzing training load without leaving the terminal.
+It targets research, education, and portable inference (workstation today; embedded / mobile / web recipes for exported models), with the same methods available from notebooks to constrained devices.
 
-The platform is designed for broad use across **scientific computing**, **embedded systems**, **performance and health informatics**, and education, with the same APIs and methods available wherever the stack runs.
-
-Open development lives in a single monorepo:
+Open development lives in a single monorepo (default branch **`develop`**):
 
 **→ [github.com/symworx/symworx](https://github.com/symworx/symworx)**
 
 ## Focus
 
-SymWorx turns dynamical systems theory and rigorous signal methods into **usable computational pipelines** — tools you can inspect, extend, and run under real constraints of noise, latency, and power.
+SymWorx turns dynamical systems theory, rigorous signal methods, and classical data-driven models into **usable computational pipelines** — tools you can inspect, extend, and run under real constraints of noise, latency, and power.
 
 ### Physiological & biomechanical analysis and simulation
 
-Process and model biosignals and movement with quality-aware features and physiologically meaningful metrics. Domain crates cover:
+Process and model biosignals and movement with quality-aware features and physiologically meaningful metrics:
 
 - Wearable and lab modalities such as **PPG**, respiration, and related time series  
-- **Gait** and biomechanical responses, including work toward integrated running / performance simulation  
+- **Gait** and biomechanical responses (including run / performance work inside biosym)  
 - **Central pattern generators (CPG)** that couple physiological and biomechanical signals  
-- Training **load, recovery, and multi-source** performance time series (ACWR/TSS-style metrics, FIT ingestion, nutrition modeling)  
+- Training **load, recovery, and multi-source** performance time series (ACWR/TSS-style metrics, FIT ingestion, nutrition modeling, `symload` CLI)  
 - Sport-agnostic **spatial / trajectory** analysis for how agents use space over time  
 
 ### Nonlinear dynamics & complexity
@@ -34,26 +32,42 @@ Expose temporal structure that linear summaries often miss:
 
 - **Recurrence quantification** (RQA / CRQA), recurrence plots, and related pipelines  
 - **Entropy and complexity** measures  
-- Embedding, DMD, Koopman/EDMD, and related dynamical tools  
-- Signal processing foundations — filters, peaks, sparse sensing, interpolation, resampling  
+- Embedding, DMD, SINDy / SINDYc, Koopman/EDMD, and related dynamical tools  
+- Signal processing foundations — filters, peaks, sparse sensing, Kalman family, interpolation, resampling  
+
+### Classical ML & statistics
+
+Classical, interpretable ML and stats in **`symworx-stats`** (many APIs pure Rust; advanced LA behind optional `linalg` / OpenBLAS):
+
+- Preprocessing (scalers), train/test splits and folds  
+- **Logistic regression** (binary + multiclass OVR), Gaussian **Naive Bayes**, **k-NN**, rule lists / stumps  
+- **k-means** clustering; classification metrics including **ROC/AUC**  
+- OLS / Ridge / Lasso / Elastic Net, LDA, PCA/SVD, polynomial regression (with `linalg` where needed)  
+- **Model export** for predict-only use on C/MCU, iOS, Android, and web  
 
 ### Embedded systems & portable computation
 
 A portable computational engine intended to:
 
-- Run on **microcontrollers and bare-metal** as well as desktop and cloud  
+- Run analysis and simulation on desktop and cloud, with a path toward **microcontrollers and bare-metal**  
 - Support **host-side embedded streaming** (e.g. PPG protocols, serial and simulator sources)  
 - Integrate cleanly with **Python** for education, data science, and rapid prototyping  
 - Prefer **secure, explicit, testable** implementations suitable for high-assurance stacks  
 
-### Terminal UI (*symview*)
+### Terminal UI — *symview* (`symworx-tui`)
 
-The **TUI** (`symworx-tui`, binary **`symview`**) is the interactive front end for day-to-day work in the monorepo:
+The **TUI** is the interactive front end for day-to-day work. From **Home**, workflows include:
 
-- Load and convert physiological / biosym signals (CSV, Parquet, IBI, and related formats via `symworx-io`)  
-- Explore and visualize signals in the terminal  
-- Run **dynamics** workflows (including RQA parameter exploration)  
-- First-class **LoadSym** workflows for workout analysis, calendar trends, and load-related recommendations  
+| Key | Workflow | What it covers |
+|-----|----------|----------------|
+| **1** | **BioSym** | Import · Explore · Dynamics (RQA) · Generate demo signals |
+| **2** | **StatsSym** | Import · **Lab** (classical ML / stats tasks) · Generate teaching presets |
+| **3** | **LoadSym** | Workout analysis, calendar trends, load recommendations |
+| **4** | **SpatialSym** | Trajectory / space metrics and decision views |
+
+Also: keyboard-driven navigation, file conversion via `symworx-io`, sparkline/stats explore views.
+
+When the monorepo is available locally:
 
 ```bash
 cargo run -p symworx-tui --bin symview
@@ -65,27 +79,28 @@ cargo run -p symworx-tui --bin symview
 |---|---|
 | **Security** | Minimize unsafe code, reduce unintended execution paths, and lower supply-chain risk |
 | **Robustness** | Predictable behavior, strong typing, and explicit error handling across the stack |
-| **Scalability** | Consistent APIs for embedded, desktop, scientific, and educational workloads |
+| **Scalability** | One kernel for analysis, simulation, classical ML, and portable inference |
 
-Much of the original work began in Python and is being rewritten in Rust to deepen assurance and portability while keeping research-friendly bindings.
+Much of the original work began in Python; the long-term engine is **Rust**, with Python for teaching and rapid prototyping. Intended license: **Apache-2.0**.
 
 ## Crates
 
-Domain and foundation crates inside [symworx/symworx](https://github.com/symworx/symworx):
+Domain and foundation crates inside [symworx/symworx](https://github.com/symworx/symworx) (paths on default branch **`develop`**):
 
 | Crate | Focus |
 |-------|--------|
-| [`symworx-biosym`](https://github.com/symworx/symworx/tree/main/crates/symworx-biosym) | Physiological signals (PPG, respiration), gait analysis, and central pattern generators |
-| [`symworx-loadsym`](https://github.com/symworx/symworx/tree/main/crates/symworx-loadsym) | Training load, periodization, ACWR/TSS, monotony/strain, and nutrition modeling |
-| [`symworx-spatialsym`](https://github.com/symworx/symworx/tree/main/crates/symworx-spatialsym) | Sport-agnostic 2D trajectory analysis and post-hoc spatial decision modeling |
-| [`symworx-dynamics`](https://github.com/symworx/symworx/tree/main/crates/symworx-dynamics) | Nonlinear dynamics — RQA, embedding, entropy, DMD, Koopman/EDMD, LTI control |
-| [`symworx-signal`](https://github.com/symworx/symworx/tree/main/crates/symworx-signal) | Filters, peaks, sparse sensing, interpolation, and resampling |
-| [`symworx-core`](https://github.com/symworx/symworx/tree/main/crates/symworx-core) | Core re-exports and shared utilities across the simulation crates |
-| [`symworx-tui`](https://github.com/symworx/symworx/tree/main/crates/symworx-tui) | **TUI** (*symview*) — interactive terminal UI for biosignals, dynamics (RQA), and LoadSym analysis |
-| [`symworx-io`](https://github.com/symworx/symworx/tree/main/crates/symworx-io) | Canonical I/O for biosignals and activity data (CSV, Parquet, FIT, email) |
-| [`symworx-embed`](https://github.com/symworx/symworx/tree/main/crates/symworx-embed) | Host-side embedded streaming — PPG sample protocol, serial / simulator sources |
+| [`symworx-tui`](https://github.com/symworx/symworx/tree/develop/crates/symworx-tui) | **TUI** (*symview*) — BioSym, **StatsSym** (ML lab), LoadSym, SpatialSym |
+| [`symworx-core`](https://github.com/symworx/symworx/tree/develop/crates/symworx-core) | Core re-exports and shared utilities |
+| [`symworx-stats`](https://github.com/symworx/symworx/tree/develop/crates/symworx-stats) | Statistics + **classical ML** (logistic, NB, k-NN, rules, k-means, PCA, …) |
+| [`symworx-biosym`](https://github.com/symworx/symworx/tree/develop/crates/symworx-biosym) | Physiological signals (PPG, respiration), gait, CPG |
+| [`symworx-loadsym`](https://github.com/symworx/symworx/tree/develop/crates/symworx-loadsym) | Training load, FIT, nutrition, `symload` CLI |
+| [`symworx-spatialsym`](https://github.com/symworx/symworx/tree/develop/crates/symworx-spatialsym) | 2D trajectory analysis and spatial decision modeling |
+| [`symworx-dynamics`](https://github.com/symworx/symworx/tree/develop/crates/symworx-dynamics) | Nonlinear dynamics — RQA, embedding, entropy, DMD, SINDy |
+| [`symworx-signal`](https://github.com/symworx/symworx/tree/develop/crates/symworx-signal) | Filters, peaks, sparse sensing, Kalman family |
+| [`symworx-io`](https://github.com/symworx/symworx/tree/develop/crates/symworx-io) | Canonical I/O for biosignals and activity data |
+| [`symworx-embed`](https://github.com/symworx/symworx/tree/develop/crates/symworx-embed) | Host-side embedded streaming (PPG protocol, serial / sim) |
 
-Also in the monorepo: [`symworx-loadsym-db`](https://github.com/symworx/symworx/tree/main/crates/symworx-loadsym-db), [`symworx-stats`](https://github.com/symworx/symworx/tree/main/crates/symworx-stats), [`symworx-math`](https://github.com/symworx/symworx/tree/main/crates/symworx-math), [`symworx-backend`](https://github.com/symworx/symworx/tree/main/crates/symworx-backend), [`symworx-error`](https://github.com/symworx/symworx/tree/main/crates/symworx-error), and [Python bindings](https://github.com/symworx/symworx/tree/main/bindings/python).
+Also: [`symworx-loadsym-db`](https://github.com/symworx/symworx/tree/develop/crates/symworx-loadsym-db), [`symworx-math`](https://github.com/symworx/symworx/tree/develop/crates/symworx-math), [`symworx-backend`](https://github.com/symworx/symworx/tree/develop/crates/symworx-backend), [`symworx-error`](https://github.com/symworx/symworx/tree/develop/crates/symworx-error), and [Python bindings](https://github.com/symworx/symworx/tree/develop/bindings/python).
 
 ## Contributors
 
@@ -95,7 +110,7 @@ Also in the monorepo: [`symworx-loadsym-db`](https://github.com/symworx/symworx/
 
 ## Get involved
 
-- **Code:** [symworx/symworx](https://github.com/symworx/symworx)
+- **Code:** [symworx/symworx](https://github.com/symworx/symworx) (opens with public release)
 - **Contributing:** [CONTRIBUTING.md](https://github.com/symworx/.github/blob/main/.github/CONTRIBUTING.md)
 - **Security:** [SECURITY.md](https://github.com/symworx/.github/blob/main/.github/SECURITY.md)
-- **Site:** [symworx.github.io/.github](https://symworx.github.io/.github/)
+- **Site:** [symworx.github.io/.github](https://symworx.github.io/.github/) (after Pages is enabled)
