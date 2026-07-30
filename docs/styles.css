@@ -365,6 +365,25 @@ main {
   margin-top: 0.35rem;
 }
 
+.project-grid .desc strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* Depth-C cards: full-width pitch blocks that still link out */
+.project-grid-deep {
+  grid-template-columns: 1fr;
+}
+
+.project-grid-deep a {
+  gap: 0.45rem;
+}
+
+.project-grid-deep .desc {
+  max-width: 42rem;
+  line-height: 1.55;
+}
+
 .more-crates {
   margin: -2rem 0 3.5rem;
   color: var(--muted);

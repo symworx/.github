@@ -1,116 +1,62 @@
-# SymWorx
+# Welcome to the _SymWorx_ Project
 
-> **First public release pending.** The monorepo and APIs are under active development; packaging, docs, and stability guarantees for a public release are not final yet. The product repository will open with the first public release — follow [github.com/symworx](https://github.com/symworx) for updates.
+**SymWorx** began as a focused effort to develop a modular computational stack for biosignal analysis as well as training load & training periodization, while incorporating methods from nonlinear dynamics and machine learning — capable of being deployed on bare metal, mobile, and web applications. To achieve this, these tools were written in **Rust** and coupled with **Python** bindings.
 
-### Isolated environments for modeling, analysis & simulation
+Since beginning this work, the _product_ offering has expanded and we are working on other tools and resources that would/could accompany the scientist, engineer, or product manager in their efforts. Examples include (1) tools and resources to manage research/scientific articles and (2) resources to generate text-based insights for blog articles or social media campaigns.
 
-**SymWorx** is a modular computational stack for **biosignal analysis**, **training load**, **nonlinear dynamics**, and **classical ML** — with a **Rust kernel**, **Python bindings**, and a keyboard-driven terminal UI (**`symview`**).
+The core [scientific repo](https://github.com/symworx/symworx) and [insights generation tools](https://github.com/symworx/symworx-insights) are **pending public release**.
 
-It targets research, education, and portable inference (workstation today; embedded / mobile / web recipes for exported models), with the same methods available from notebooks to constrained devices.
+The [electronic library](https://github.com/symworx/symworx-elibrary) tools are available under a beta release.
 
-Open development lives in a single monorepo (default branch **`develop`**):
+## Repositories
+| Project                                                                     |  Visibility               | Description                                                       |
+|:----------------------------------------------------------------------------|:-------------------------|:------------------------------------------------------------------|
+| [**symworx**](https://github.com/symworx/symworx)                   | *Pending public release* | Core monorepo: Rust + Python stack, crates, and **`symview`** TUI |
+| [**symworx-elibrary**](https://github.com/symworx/symworx-elibrary) | ***Public (beta)***      | Local paper (PDF) library: metadata, search, lists, TUI (`elib`)  |
+| [**symworx-insights**](https://github.com/symworx/symworx-insights) | *Pending public release* | Text-based insights for blogs, social, and related communication  |
 
-**→ [github.com/symworx/symworx](https://github.com/symworx/symworx)**
+---
 
-## Focus
+### [SymWorx](https://github.com/symworx/symworx)
 
-We put dynamical systems methods, signal processing, and classical ML into one inspectable stack you can run in research workflows and on constrained hardware. 
+An inspectable **Rust** kernel with **Python** bindings for people who need the same scientific methods on a workstation today and a path toward constrained hardware tomorrow — biosignals, training load, nonlinear dynamics, and classical ML in one stack, with a keyboard-driven terminal UI (**`symview`**) for local testing, development, and analysis. 
 
-### Physiological & biomechanical analysis and simulation
+**Focus:** physiological & biomechanical analysis · nonlinear dynamics & complexity · classical ML & stats · embedded & portable computation
 
-Process and model biosignals and movement with quality-aware features and physiologically meaningful metrics:
+Much of the original work began in Python but has since transitioned to **Rust** as the long-term engine with Python bindings for teaching and rapid prototyping. The stack is built to stay explicit and testable — from host-side streaming and research workflows toward microcontrollers, mobile, and web recipes for exported models — without bolting together a new toolchain for each study.
 
-- Wearable and lab modalities such as **PPG**, respiration, and related time series  
-- **Gait** and biomechanical responses (including run / performance work inside biosym)  
-- **Central pattern generators (CPG)** that couple physiological and biomechanical signals  
-- Training **load, recovery, and multi-source** performance time series (ACWR/TSS-style metrics, FIT ingestion, nutrition modeling, `symload` CLI)  
-- Sport-agnostic **spatial / trajectory** analysis for how agents use space over time  
+Install, crate map, and `symview` workflows will live in the monorepo when it opens.
 
-### Nonlinear dynamics & complexity
+**Status:** pending public release
 
-Expose temporal structure that linear summaries often miss:
+    
+### [SymWorx-elibrary](https://github.com/symworx/symworx-elibrary)
 
-- **Recurrence quantification** (RQA / CRQA), recurrence plots, and related pipelines  
-- **Entropy and complexity** measures  
-- Embedding, DMD, SINDy / SINDYc, Koopman/EDMD, and related dynamical tools  
-- Signal processing foundations — filters, peaks, sparse sensing, Kalman family, interpolation, resampling  
+A local digital library for research PDFs: ingest, enrich metadata (PubMed → Crossref → local fallback), full-text search, reading lists, and an optional agents/RAG path on your own corpus. Day-to-day work runs through the **`elib`** CLI and TUI.
 
-### Classical ML & statistics
+Quickstart, install, and library layout live in the product repo.
 
-Classical, interpretable ML and stats in **`symworx-stats`** (many APIs pure Rust; advanced LA behind optional `linalg` / OpenBLAS):
+**Status:** **public beta**
 
-- Preprocessing (scalers), train/test splits and folds  
-- **Logistic regression** (binary + multiclass OVR), Gaussian **Naive Bayes**, **k-NN**, rule lists / stumps  
-- **k-means** clustering; classification metrics including **ROC/AUC**  
-- OLS / Ridge / Lasso / Elastic Net, LDA, PCA/SVD, polynomial regression (with `linalg` where needed)  
-- **Model export** for predict-only use on C/MCU, iOS, Android, and web  
 
-### Embedded systems & portable computation
+### [SymWorx-insights](https://github.com/symworx/symworx-insights)
 
-A portable computational engine intended to:
+Tools and workflows for turning notes, analyses, and research artifacts into draft **blog** and **social** copy — inspectable, human-editable narrative that sits alongside the scientific stack and literature library rather than replacing either.
 
-- Run analysis and simulation on desktop and cloud, with a path toward **microcontrollers and bare-metal**  
-- Support **host-side embedded streaming** (e.g. PPG protocols, serial and simulator sources)  
-- Integrate cleanly with **Python** for education, data science, and rapid prototyping  
-- Prefer **secure, explicit, testable** implementations suitable for high-assurance stacks  
+**Status:** pending public release
 
-### Terminal UI — *symview* (`symworx-tui`)
-
-The **TUI** is the interactive front end for day-to-day work. From **Home**, workflows include:
-
-| Key | Workflow | What it covers |
-|-----|----------|----------------|
-| **1** | **BioSym** | Import · Explore · Dynamics (RQA) · Generate demo signals |
-| **2** | **StatsSym** | Import · **Lab** (classical ML / stats tasks) · Generate teaching presets |
-| **3** | **LoadSym** | Workout analysis, calendar trends, load recommendations |
-| **4** | **SpatialSym** | Trajectory / space metrics and decision views |
-
-Also: keyboard-driven navigation, file conversion via `symworx-io`, sparkline/stats explore views.
-
-When the monorepo is available locally:
-
-```bash
-cargo run -p symworx-tui --bin symview
-```
+---
 
 ## Philosophy
 
-| | |
-|---|---|
-| **Security** | Minimize unsafe code, reduce unintended execution paths, and lower supply-chain risk |
-| **Robustness** | Predictable behavior, strong typing, and explicit error handling across the stack |
-| **Scalability** | One kernel for analysis, simulation, classical ML, and portable inference |
+- **Security**    : Minimize unsafe code, reduce unintended execution paths, and lower supply-chain risk
+- **Robustness**  : Predictable behavior, strong typing, and explicit error handling across the stack
+- **Scalability** : One scientific kernel for analysis, simulation, classical ML, and portable inference — with companion tools for literature and communication
 
-Much of the original work began in Python; the long-term engine is **Rust**, with Python for teaching and rapid prototyping. Intended license: **Apache-2.0**.
-
-## Crates
-
-Domain and foundation crates inside [symworx/symworx](https://github.com/symworx/symworx) (paths on default branch **`develop`**):
-
-| Crate | Focus |
-|-------|--------|
-| [`symworx-tui`](https://github.com/symworx/symworx/tree/develop/crates/symworx-tui) | **TUI** (*symview*) — BioSym, **StatsSym** (ML lab), LoadSym, SpatialSym |
-| [`symworx-core`](https://github.com/symworx/symworx/tree/develop/crates/symworx-core) | Core re-exports and shared utilities |
-| [`symworx-stats`](https://github.com/symworx/symworx/tree/develop/crates/symworx-stats) | Statistics + **classical ML** (logistic, NB, k-NN, rules, k-means, PCA, …) |
-| [`symworx-biosym`](https://github.com/symworx/symworx/tree/develop/crates/symworx-biosym) | Physiological signals (PPG, respiration), gait, CPG |
-| [`symworx-loadsym`](https://github.com/symworx/symworx/tree/develop/crates/symworx-loadsym) | Training load, FIT, nutrition, `symload` CLI |
-| [`symworx-spatialsym`](https://github.com/symworx/symworx/tree/develop/crates/symworx-spatialsym) | 2D trajectory analysis and spatial decision modeling |
-| [`symworx-dynamics`](https://github.com/symworx/symworx/tree/develop/crates/symworx-dynamics) | Nonlinear dynamics — RQA, embedding, entropy, DMD, SINDy |
-| [`symworx-signal`](https://github.com/symworx/symworx/tree/develop/crates/symworx-signal) | Filters, peaks, sparse sensing, Kalman family |
-| [`symworx-io`](https://github.com/symworx/symworx/tree/develop/crates/symworx-io) | Canonical I/O for biosignals and activity data |
-| [`symworx-embed`](https://github.com/symworx/symworx/tree/develop/crates/symworx-embed) | Host-side embedded streaming (PPG protocol, serial / sim) |
-
-Also: [`symworx-loadsym-db`](https://github.com/symworx/symworx/tree/develop/crates/symworx-loadsym-db), [`symworx-math`](https://github.com/symworx/symworx/tree/develop/crates/symworx-math), [`symworx-backend`](https://github.com/symworx/symworx/tree/develop/crates/symworx-backend), [`symworx-error`](https://github.com/symworx/symworx/tree/develop/crates/symworx-error), and [Python bindings](https://github.com/symworx/symworx/tree/develop/bindings/python).
 
 ## Contributors
-
-- [ntberry](https://github.com/ntberry)
-- [PalEm Dynamics](https://www.PalEmDynamics.com)
-- [cSYMd](https://www.cSYMd.com)
+| [ntberry](https://github.com/ntberry) | [PalEm Dynamics](https://www.PalEmDynamics.com) | [cSYMd](https://www.cSYMd.com) |
 
 ## Get involved
 
-- **Code:** [symworx/symworx](https://github.com/symworx/symworx) (opens with public release)
-- **Contributing:** [CONTRIBUTING.md](https://github.com/symworx/.github/blob/main/.github/CONTRIBUTING.md)
-- **Security:** [SECURITY.md](https://github.com/symworx/.github/blob/main/.github/SECURITY.md)
-- **Site:** [symworx.github.io/.github](https://symworx.github.io/.github/) (after Pages is enabled)
+ [Contributing](https://github.com/symworx/.github/blob/main/.github/CONTRIBUTING.md) | [Security](https://github.com/symworx/.github/blob/main/.github/SECURITY.md) | [Site](https://symworx.github.io/.github/)

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="SymWorx — biosignal analysis, classical ML, nonlinear dynamics, and embedded systems. Rust kernel, Python bindings, and symview TUI."
+      content="SymWorx — biosignal analysis, classical ML, nonlinear dynamics, and companion research tools. Rust kernel, Python bindings, symview TUI, and elib paper library."
     />
     <title>SymWorx</title>
     <link rel="stylesheet" href="styles.css" />
@@ -16,122 +16,104 @@
     <header class="site-header">
       <a class="brand" href="./">SymWorx</a>
       <nav>
-        <a href="https://github.com/symworx/symworx">GitHub</a>
-        <a href="#focus">Focus</a>
-        <a href="#tui">TUI</a>
-        <a href="#crates">Crates</a>
+        <a href="https://github.com/symworx">GitHub</a>
+        <a href="#repos">Repos</a>
+        <a href="#principles">Principles</a>
         <a class="btn" href="https://github.com/symworx">Org</a>
       </nav>
     </header>
 
     <main>
       <aside class="release-banner" role="status">
-        <strong>First public release pending.</strong>
-        The monorepo and APIs are under active development; packaging, docs, and
-        stability guarantees for a public release are not final yet. Product code
-        opens with the first public release —
-        <a href="https://github.com/symworx">follow the org</a> for updates.
+        <strong>Core monorepo and insights pending public release.</strong>
+        Companion packages open independently —
+        <a href="https://github.com/symworx/symworx-elibrary">symworx-elibrary</a>
+        is in public beta.
+        <a href="https://github.com/symworx">Follow the org</a> for updates.
       </aside>
 
       <section class="hero">
-        <p class="eyebrow">Rust + Python · TUI · classical ML</p>
+        <p class="eyebrow">Rust + Python · research tools · portable computation</p>
         <h1>
           Isolated environments for<br />
           <span class="gradient">modeling &amp; simulation</span>
         </h1>
         <p class="lede">
-          SymWorx is a modular computational stack for
-          <strong>biosignal analysis</strong>, <strong>training load</strong>,
-          <strong>nonlinear dynamics</strong>, and <strong>classical ML</strong>
-          — with a Rust kernel, Python bindings, and a keyboard-driven terminal
-          UI (<strong>symview</strong>). Built for research, education, and
-          portable inference from workstations toward the edge.
+          SymWorx began as a modular stack for
+          <strong>biosignal analysis</strong>,
+          <strong>training load &amp; periodization</strong>,
+          <strong>nonlinear dynamics</strong>, and
+          <strong>machine learning</strong> — written in
+          <strong>Rust</strong> with <strong>Python</strong> bindings, aimed at
+          bare metal, mobile, and web. The product surface now also includes
+          tools for literature and text-based insights for scientists, engineers,
+          and product teams.
         </p>
         <p class="focus-tags" aria-label="Focus areas">
           <span>Physiological &amp; biomechanical</span>
-          <span>Classical ML</span>
           <span>Nonlinear dynamics</span>
-          <span>Embedded systems</span>
-          <span>TUI · symview</span>
+          <span>Classical ML</span>
+          <span>Embedded &amp; portable</span>
+          <span>Literature · elib</span>
+          <span>Insights</span>
         </p>
         <div class="cta-row">
           <a class="btn primary" href="https://github.com/symworx/symworx">Monorepo</a>
-          <a class="btn ghost" href="#tui">symview TUI</a>
+          <a class="btn ghost" href="https://github.com/symworx/symworx-elibrary">elibrary (beta)</a>
+          <a class="btn ghost" href="https://github.com/symworx/symworx-insights">insights</a>
         </div>
       </section>
 
-      <section class="focus" id="focus" aria-label="Focus areas">
+      <section class="projects" id="repos">
         <div class="section-head">
-          <h2>Focus</h2>
+          <h2>Repositories</h2>
           <p>
-            We put dynamical systems methods, signal processing, and classical
-            ML into one inspectable stack for research workflows and constrained
-            hardware. Build reproducible analyses of biosignals and performance
-            data, quantify nonlinear structure, and train simple models you can
-            export — without bolting together a new stack for each study.
+            Orient here; install, crates, and quickstarts live in each product
+            repo when it is open.
           </p>
         </div>
-        <div class="pillars focus-pillars">
-          <article>
-            <h2>Physiological &amp; biomechanical</h2>
-            <p>
-              Biosignals (PPG, respiration), gait and CPG models, training load
-              and multi-source performance time series, and spatial trajectory
-              analysis.
-            </p>
-          </article>
-          <article>
-            <h2>Classical ML &amp; stats</h2>
-            <p>
-              Logistic (binary/OVR), Naive Bayes, k-NN, rule lists, k-means,
-              metrics/ROC-AUC, plus OLS/Ridge/LDA/PCA behind optional linalg —
-              with model export for C, mobile, and web.
-            </p>
-          </article>
-          <article>
-            <h2>Nonlinear dynamics</h2>
-            <p>
-              RQA, entropy and complexity, embedding, DMD and SINDy, plus signal
-              foundations — filters, peaks, sparse sensing, and Kalman tools.
-            </p>
-          </article>
-          <article>
-            <h2>Embedded &amp; portable</h2>
-            <p>
-              Host-side streaming, a path toward microcontrollers, and the same
-              methods via Python for teaching and rapid prototyping.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="community tui-callout" id="tui" aria-label="Terminal UI">
-        <h2>Terminal UI · symview</h2>
-        <p>
-          Day-to-day interactive work runs through
-          <code>symworx-tui</code> (binary <code>symview</code>). From
-          <strong>Home</strong>:
-        </p>
-        <ul class="workflow-list">
-          <li><strong>1 · BioSym</strong> — Import · Explore · Dynamics (RQA) · Generate</li>
-          <li><strong>2 · StatsSym</strong> — Import · <strong>Lab</strong> (classical ML / stats) · Generate</li>
-          <li><strong>3 · LoadSym</strong> — Workouts, calendar trends, load recommendations</li>
-          <li><strong>4 · SpatialSym</strong> — Trajectories, space metrics, decision views</li>
+        <ul class="project-grid project-grid-deep">
+          <li>
+            <a href="https://github.com/symworx/symworx">
+              <span class="name">symworx</span>
+              <span class="tag">pending public release · develop</span>
+              <span class="desc"
+                >Inspectable Rust kernel with Python bindings for biosignals,
+                training load, nonlinear dynamics, and classical ML — plus the
+                <strong>symview</strong> TUI. Same methods from research
+                workstations toward constrained hardware, without a new toolchain
+                per study. Install and crate map land in the monorepo when it
+                opens.</span
+              >
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/symworx/symworx-elibrary">
+              <span class="name">symworx-elibrary</span>
+              <span class="tag">public beta · elib</span>
+              <span class="desc"
+                >Local PDF library: ingest, PubMed → Crossref → local metadata,
+                full-text search, reading lists, and an optional agents/RAG path.
+                Day-to-day work via the <strong>elib</strong> CLI and TUI.
+                Setup and quickstart are in the product repo.</span
+              >
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/symworx/symworx-insights">
+              <span class="name">symworx-insights</span>
+              <span class="tag">pending public release</span>
+              <span class="desc"
+                >Turn notes, analyses, and research artifacts into draft blog and
+                social copy — human-editable narrative alongside the scientific
+                stack and literature library.</span
+              >
+            </a>
+          </li>
         </ul>
-        <p class="community-note">
-          When the monorepo is available locally:
-        </p>
-        <pre class="code-block"><code>cargo run -p symworx-tui --bin symview</code></pre>
-        <div class="cta-row">
-          <a
-            class="btn ghost"
-            href="https://github.com/symworx/symworx/tree/develop/crates/symworx-tui"
-            >symworx-tui on develop</a
-          >
-        </div>
       </section>
 
-      <section class="pillars" aria-label="Principles">
+      <section class="pillars" id="principles" aria-label="Principles">
         <article>
           <h2>Security</h2>
           <p>
@@ -149,109 +131,11 @@
         <article>
           <h2>Scalability</h2>
           <p>
-            One kernel for analysis, simulation, classical ML, and portable
-            inference.
+            One scientific kernel for analysis, simulation, classical ML, and
+            portable inference — with companion tools for literature and
+            communication.
           </p>
         </article>
-      </section>
-
-      <section class="projects" id="crates">
-        <div class="section-head">
-          <h2>Crates</h2>
-          <p>
-            Domain and foundation crates inside
-            <a href="https://github.com/symworx/symworx">symworx/symworx</a>
-            (default branch <code>develop</code>).
-          </p>
-        </div>
-        <ul class="project-grid">
-          <li>
-            <a href="https://github.com/symworx/symworx/tree/develop/crates/symworx-tui">
-              <span class="name">symworx-tui</span>
-              <span class="tag">TUI · symview</span>
-              <span class="desc"
-                >Interactive terminal UI: BioSym, StatsSym ML lab, LoadSym,
-                SpatialSym.</span
-              >
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/symworx/symworx/tree/develop/crates/symworx-stats">
-              <span class="name">symworx-stats</span>
-              <span class="tag">classical ML</span>
-              <span class="desc"
-                >Stats + ML: logistic, NB, k-NN, rules, k-means, PCA, model
-                export.</span
-              >
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/symworx/symworx/tree/develop/crates/symworx-biosym">
-              <span class="name">symworx-biosym</span>
-              <span class="tag">biology · biomechanics</span>
-              <span class="desc"
-                >PPG, respiration, gait analysis, and central pattern
-                generators.</span
-              >
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/symworx/symworx/tree/develop/crates/symworx-loadsym">
-              <span class="name">symworx-loadsym</span>
-              <span class="tag">training load</span>
-              <span class="desc"
-                >ACWR/TSS-style load, FIT, nutrition, and the symload CLI.</span
-              >
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/symworx/symworx/tree/develop/crates/symworx-dynamics">
-              <span class="name">symworx-dynamics</span>
-              <span class="tag">nonlinear dynamics</span>
-              <span class="desc"
-                >RQA, embedding, entropy, DMD, SINDy, and control tools.</span
-              >
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/symworx/symworx/tree/develop/crates/symworx-signal">
-              <span class="name">symworx-signal</span>
-              <span class="tag">signal processing</span>
-              <span class="desc"
-                >Filters, peaks, sparse sensing, Kalman family, resampling.</span
-              >
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/symworx/symworx/tree/develop/crates/symworx-spatialsym">
-              <span class="name">symworx-spatialsym</span>
-              <span class="tag">spatial analysis</span>
-              <span class="desc"
-                >2D trajectories and post-hoc spatial decision modeling.</span
-              >
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/symworx/symworx/tree/develop/crates/symworx-core">
-              <span class="name">symworx-core</span>
-              <span class="tag">foundation</span>
-              <span class="desc"
-                >Core re-exports and shared utilities across the stack.</span
-              >
-            </a>
-          </li>
-        </ul>
-        <p class="more-crates">
-          Also:
-          <a href="https://github.com/symworx/symworx/tree/develop/crates/symworx-io">io</a>,
-          <a href="https://github.com/symworx/symworx/tree/develop/crates/symworx-embed">embed</a>,
-          <a href="https://github.com/symworx/symworx/tree/develop/crates/symworx-loadsym-db">loadsym-db</a>,
-          <a href="https://github.com/symworx/symworx/tree/develop/crates/symworx-math">math</a>,
-          <a href="https://github.com/symworx/symworx/tree/develop/crates/symworx-backend">backend</a>,
-          <a href="https://github.com/symworx/symworx/tree/develop/crates/symworx-error">error</a>,
-          and
-          <a href="https://github.com/symworx/symworx/tree/develop/bindings/python">Python bindings</a>.
-        </p>
       </section>
 
       <section class="community" id="contributors">
@@ -279,6 +163,7 @@
         <p class="community-note">
           Community defaults live in the organization
           <a href="https://github.com/symworx/.github">.github</a> repository.
+          Intended license: Apache-2.0.
         </p>
         <div class="cta-row">
           <a class="btn ghost" href="https://github.com/symworx/.github/blob/main/.github/CONTRIBUTING.md"
@@ -293,7 +178,11 @@
 
     <footer class="site-footer">
       <p>
-        <a href="https://github.com/symworx/symworx">github.com/symworx/symworx</a>
+        <a href="https://github.com/symworx">github.com/symworx</a>
+        ·
+        <a href="https://github.com/symworx/symworx-elibrary">elibrary</a>
+        ·
+        <a href="https://github.com/symworx/symworx-insights">insights</a>
         · Apache-2.0 (intended)
       </p>
     </footer>
