@@ -55,7 +55,7 @@ Tools and workflows for turning notes, analyses, and research artifacts into dra
 
 
 ## Contributors
-| [ntberry](https://github.com/ntberry) | [PalEm Dynamics](https://www.PalEmDynamics.com) | [cSYMd](https://www.cSYMd.com) |
+[ntberry](https://github.com/ntberry) | [PalEm Dynamics](https://www.PalEmDynamics.com) | [cSYMd](https://www.cSYMd.com)
 
 ## Get involved
 
