@@ -38,11 +38,7 @@ Deployed from `docs/` via [`.github/workflows/pages.yml`](.github/workflows/page
 
 **Cost:** Free for this **public** repository on GitHub Free (soft limits on site size / bandwidth).
 
-**First-time enablement** (required; the workflow fails until this is set):
-
-1. Repo **Settings → Pages → Build and deployment → Source**: **GitHub Actions**
-2. Re-run **Deploy GitHub Pages** (Actions tab) or push a change under `docs/`
-3. Site URL: [https://symworx.github.io/.github/](https://symworx.github.io/.github/)
+**Enablement:** Pages is configured for **GitHub Actions** (`build_type: workflow`). The deploy workflow sets `enablement: true` on `configure-pages` so a missing site can be created automatically. Site URL: [https://symworx.github.io/.github/](https://symworx.github.io/.github/).
 
 Optional: custom domain under **Settings → Pages**.
 
