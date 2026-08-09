@@ -1,19 +1,17 @@
 # SymWorx
 
-> **First public release pending.** The monorepo and APIs are under active development; packaging, docs, and stability guarantees for a public release are not final yet. The product repository will open with the first public release — follow [github.com/symworx](https://github.com/symworx) for updates.
+> **First public release now available.** The [monorepo](https://github.com/symworx/symworx) remains under active development and in beta.
+> **SymWorx** is available under the [Apache-2.0](https://github.com/symworx/symworx/blob/develop/LICENSE) license. 
 
 ### Isolated environments for modeling, analysis & simulation
 
-**SymWorx** is a modular computational stack for **biosignal analysis**, **training load**, **nonlinear dynamics**, and **classical ML** — with a **Rust kernel**, **Python bindings**, and a keyboard-driven terminal UI (**`symview`**).
+**SymWorx** is a modular computational stack for **biosignal analysis**, **training load**, **nonlinear dynamics**, and **classical stats and ML** — with a **Rust kernel**, **Python bindings**, and a keyboard-driven terminal UI (**`symview`**).
 
 It targets research, education, and portable inference (workstation today; embedded / mobile / web recipes for exported models), with the same methods available from notebooks to constrained devices.
 
-Open development lives in a single [monorepo](https://github.com/symworx/symworx)
-
-
 ## Focus
 
-We put dynamical systems methods, signal processing, and classical ML into one inspectable stack you can run in research workflows and on constrained hardware. 
+We put dynamical systems methods, signal processing, and classical ML into one inspectable stack you can run in research workflows and on constrained hardware.
 
 ### Physiological & biomechanical analysis and simulation
 
@@ -29,8 +27,8 @@ Process and model biosignals and movement with quality-aware features and physio
 
 Expose temporal structure that linear summaries often miss:
 
-- **Recurrence quantification** (RQA / CRQA), recurrence plots, and related pipelines 
-- **Entropy and complexity** measures 
+- **Recurrence quantification** (RQA) and **cross recurrence quantification** (cRQA), recurrence plots, and related pipelines
+- **Entropy and complexity** measures
 - Embedding, DMD, SINDy / SINDYc, Koopman/EDMD, and related dynamical tools
 - Signal processing foundations — filters, peaks, sparse sensing, Kalman family, interpolation, resampling
 
@@ -42,6 +40,7 @@ Classical, interpretable ML and stats in **`symworx-stats`** (many APIs pure Rus
 - **Logistic regression** (binary + multiclass OVR), Gaussian **Naive Bayes**, **k-NN**, rule lists / stumps
 - **k-means** clustering; classification metrics including **ROC/AUC**
 - OLS / Ridge / Lasso / Elastic Net, LDA, PCA/SVD, polynomial regression (with `linalg` where needed)
+- Linear **mixed models** and growth curves for group / longitudinal trends (with `linalg`)
 - **Model export** for predict-only use on C/MCU, iOS, Android, and web
 
 ### Embedded systems & portable computation
@@ -66,7 +65,7 @@ The **TUI** is the interactive front end for day-to-day work. From **Home**, wor
 
 Also: keyboard-driven navigation, file conversion via `symworx-io`, sparkline/stats explore views.
 
-When the monorepo is available locally:
+From a local clone of the monorepo:
 
 ```bash
 cargo run -p symworx-tui --bin symview
@@ -80,7 +79,7 @@ cargo run -p symworx-tui --bin symview
 | **Robustness** | Predictable behavior, strong typing, and explicit error handling across the stack |
 | **Scalability** | One kernel for analysis, simulation, classical ML, and portable inference |
 
-Much of the original work began in Python; the long-term engine is **Rust**, with Python for teaching and rapid prototyping. Intended license: **Apache-2.0**.
+Much of the original work began in Python; the long-term engine is **Rust**, with Python for teaching and rapid prototyping. **License:** [Apache-2.0](https://github.com/symworx/symworx/blob/develop/LICENSE).
 
 ## Crates
 
@@ -90,7 +89,7 @@ Domain and foundation crates inside [symworx/symworx](https://github.com/symworx
 |-------|--------|
 | [`symworx-tui`](https://github.com/symworx/symworx/tree/develop/crates/symworx-tui) | **TUI** (*symview*) — BioSym, **StatsSym** (ML lab), LoadSym, SpatialSym |
 | [`symworx-core`](https://github.com/symworx/symworx/tree/develop/crates/symworx-core) | Core re-exports and shared utilities |
-| [`symworx-stats`](https://github.com/symworx/symworx/tree/develop/crates/symworx-stats) | Statistics + **classical ML** (logistic, NB, k-NN, rules, k-means, PCA, …) |
+| [`symworx-stats`](https://github.com/symworx/symworx/tree/develop/crates/symworx-stats) | Statistics + **classical ML** (logistic, NB, k-NN, rules, k-means, mixed models, PCA, …) |
 | [`symworx-biosym`](https://github.com/symworx/symworx/tree/develop/crates/symworx-biosym) | Physiological signals (PPG, respiration), gait, CPG |
 | [`symworx-loadsym`](https://github.com/symworx/symworx/tree/develop/crates/symworx-loadsym) | Training load, FIT, nutrition, `symload` CLI |
 | [`symworx-spatialsym`](https://github.com/symworx/symworx/tree/develop/crates/symworx-spatialsym) | 2D trajectory analysis and spatial decision modeling |
@@ -109,7 +108,6 @@ Also: [`symworx-loadsym-db`](https://github.com/symworx/symworx/tree/develop/cra
 
 ## Get involved
 
-- **Code:** [symworx/symworx](https://github.com/symworx/symworx) (opens with public release)
+- **Code:** [symworx/symworx](https://github.com/symworx/symworx)
 - **Contributing:** [CONTRIBUTING.md](https://github.com/symworx/.github/blob/main/.github/CONTRIBUTING.md)
 - **Security:** [SECURITY.md](https://github.com/symworx/.github/blob/main/.github/SECURITY.md)
-- **Site:** [symworx.github.io/.github](https://symworx.github.io/.github/) (available after public release)

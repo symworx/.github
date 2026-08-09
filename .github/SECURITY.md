@@ -3,8 +3,8 @@
 ## Supported versions
 
 Security fixes are generally applied to the default branch of each actively
-maintained SymWorx repository. If a project publishes versioned releases,
-prefer the latest release line unless maintainers state otherwise.
+maintained SymWorx repository. Prefer the latest release line unless 
+maintainers state otherwise.
 
 ## Reporting a vulnerability
 
@@ -12,13 +12,13 @@ prefer the latest release line unless maintainers state otherwise.
 
 Please report vulnerabilities privately using one of these methods:
 
-1. **GitHub Security Advisories** (preferred)  
+1. **GitHub Security Advisories** (preferred)
    On [symworx/symworx](https://github.com/symworx/symworx) when the
    repository is available: **Security → Report a vulnerability**.
 
-2. **Organization contact**  
-   Contact an organization owner via GitHub if private reporting is unavailable
-   or the monorepo is not yet public.
+2. **Organization contact**
+   Contact an organization owner via GitHub if having issues reporting
+   through GitHub.
 
 Include as much detail as you can:
 

@@ -4,8 +4,7 @@ Thanks for your interest in contributing. These guidelines apply to
 [symworx/symworx](https://github.com/symworx/symworx) unless that repository
 provides its own `CONTRIBUTING.md`.
 
-> **Note:** The first public release is pending. The monorepo may still be
-> private; contribution paths open fully when the repository is public.
+> **Note:** The first public release is now availalbe in beta. 
 
 ## Ways to contribute
 

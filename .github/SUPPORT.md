@@ -11,9 +11,9 @@
 
 ## Project
 
-Open development is in the **[symworx](https://github.com/symworx/symworx)** monorepo (default branch **`develop`**): Rust crates, classical ML in `symworx-stats`, Python bindings, and the **`symview`** TUI (BioSym, StatsSym, LoadSym, SpatialSym).
+Open development is in the **[symworx](https://github.com/symworx/symworx)** monorepo (default branch **`develop`**). 
 
-> First public release is pending; the monorepo may remain private until then.
+> First public release is now available in beta.
 
 ## Contributors
 
