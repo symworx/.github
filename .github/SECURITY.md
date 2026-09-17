@@ -13,8 +13,9 @@ maintainers state otherwise.
 Please report vulnerabilities privately using one of these methods:
 
 1. **GitHub Security Advisories** (preferred)
-   On [symworx/symworx](https://github.com/symworx/symworx) when the
-   repository is available: **Security → Report a vulnerability**.
+   On the affected repository (for example
+   [symworx/symworx](https://github.com/symworx/symworx)):
+   **Security → Report a vulnerability**.
 
 2. **Organization contact**
    Contact an organization owner via GitHub if having issues reporting
@@ -37,10 +38,10 @@ Include as much detail as you can:
 
 ## Scope
 
-In scope: code, dependencies, and configuration in the
-[symworx/symworx](https://github.com/symworx/symworx) monorepo that could lead
-to unauthorized access, data exposure, privilege escalation, or remote code
-execution.
+In scope: code, dependencies, and configuration in this organization’s
+software repositories (the analysis monorepo and sibling tools) that could
+lead to unauthorized access, data exposure, privilege escalation, or remote
+code execution.
 
 Out of scope: social engineering against individuals, denial-of-service against
 GitHub.com itself, and issues in third-party projects not under our control.

@@ -1,10 +1,15 @@
 # Contributing to SymWorx
 
-Thanks for your interest in contributing. These guidelines apply to
-[symworx/symworx](https://github.com/symworx/symworx) unless that repository
-provides its own `CONTRIBUTING.md`.
+Thanks for your interest in contributing. These are org-wide defaults.
+Use a repository’s own `CONTRIBUTING.md` when it has one.
 
-> **Note:** The first public release is now availalbe in beta. 
+Software in this org includes the [analysis monorepo](https://github.com/symworx/symworx)
+plus sibling tools ([symkit](https://github.com/symworx/symkit),
+[symelib](https://github.com/symworx/symelib),
+[symsight](https://github.com/symworx/symsight),
+[symcourse](https://github.com/symworx/symcourse),
+[symjump](https://github.com/symworx/symjump)).
+The monorepo’s first public release is in beta. 
 
 ## Ways to contribute
 
@@ -21,12 +26,12 @@ provides its own `CONTRIBUTING.md`.
 
 ## Development workflow
 
-1. Fork [symworx/symworx](https://github.com/symworx/symworx) (or use a branch if you have write access).
-2. Base work on the default branch **`develop`** (not `main`).
+1. Fork the repository you are changing (or use a branch if you have write access).
+2. Base work on that repo’s default branch — **`develop`** for the tools listed above (not `main`).
 3. Create a focused branch: `fix/short-description` or `feat/short-description`.
 4. Prefer small, reviewable commits with clear messages.
-5. Run the monorepo tests and linters before opening a PR (see its `README.md` / `DEVELOPMENT.md`).
-6. Open a pull request against **`develop`**.
+5. Run that repository’s tests and linters before opening a PR (see its `README.md` / `DEVELOPMENT.md`).
+6. Open a pull request against **`develop`** (or `main` only if that repo’s default is `main`).
 
 ## Pull requests
 
@@ -48,13 +53,13 @@ Security vulnerabilities must **not** be filed as public issues. See
 
 ## Code style
 
-- Match the monorepo style and tooling (e.g. `rustfmt`, workspace lints).
+- Match that repository’s style and tooling (e.g. `rustfmt`, workspace lints).
 - Prefer clear names and explicit error handling over cleverness.
 - Do not commit secrets, large binaries, or generated artifacts unless the
   project already tracks them intentionally.
 
 ## License
 
-Contributions are accepted under the Apache License 2.0 as used by the monorepo.
-By submitting a contribution, you agree that it may be distributed under that
-license.
+Public SymWorx repositories use the Apache License 2.0. By submitting a
+contribution, you agree that it may be distributed under that license
+(or the license stated in the target repository).
