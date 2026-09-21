@@ -2,9 +2,9 @@
 
 Open computational tools for **biosignal analysis**, **teaching**, and the supporting toolchain.
 
-Public repositories are [Apache-2.0](https://github.com/symworx/symworx/blob/develop/LICENSE). The analysis kernel is in beta; sibling tools have their own release lines.
+Public repositories are [Apache-2.0](https://github.com/symworx/symworx/blob/HEAD/LICENSE). The analysis kernel is in beta; sibling tools have their own release lines.
 
-Default branch for the software listed below is **`develop`**.
+Default branch for the software listed below is **`worx`** (GitHub Flow; tags on `worx`). Until the GitHub rename lands, clones still check out **`develop`**.
 
 ## Software
 
@@ -33,18 +33,18 @@ cargo run -p symworx-tui --bin symview
 
 | Crate | Focus |
 |-------|--------|
-| [`symworx-tui`](https://github.com/symworx/symworx/tree/develop/crates/symworx-tui) | TUI (`symview`) |
-| [`symworx-biosym`](https://github.com/symworx/symworx/tree/develop/crates/symworx-biosym) | PPG, respiration, gait, CPG |
-| [`symworx-loadsym`](https://github.com/symworx/symworx/tree/develop/crates/symworx-loadsym) | Training load, FIT, nutrition, `symload` |
-| [`symworx-spatialsym`](https://github.com/symworx/symworx/tree/develop/crates/symworx-spatialsym) | 2D trajectories and spatial decisions |
-| [`symworx-dynamics`](https://github.com/symworx/symworx/tree/develop/crates/symworx-dynamics) | RQA, embedding, entropy, DMD, SINDy |
-| [`symworx-signal`](https://github.com/symworx/symworx/tree/develop/crates/symworx-signal) | Filters, peaks, sparse sensing, Kalman family |
-| [`symworx-stats`](https://github.com/symworx/symworx/tree/develop/crates/symworx-stats) | Statistics and classical ML |
-| [`symworx-io`](https://github.com/symworx/symworx/tree/develop/crates/symworx-io) | Canonical signal / activity I/O |
-| [`symworx-embed`](https://github.com/symworx/symworx/tree/develop/crates/symworx-embed) | Host-side PPG streaming / simulator |
-| [`symworx-dbsym`](https://github.com/symworx/symworx/tree/develop/crates/symworx-dbsym) | Per-study / edge catalog |
+| [`symworx-tui`](https://github.com/symworx/symworx/tree/HEAD/crates/symworx-tui) | TUI (`symview`) |
+| [`symworx-biosym`](https://github.com/symworx/symworx/tree/HEAD/crates/symworx-biosym) | PPG, respiration, gait, CPG |
+| [`symworx-loadsym`](https://github.com/symworx/symworx/tree/HEAD/crates/symworx-loadsym) | Training load, FIT, nutrition, `symload` |
+| [`symworx-spatialsym`](https://github.com/symworx/symworx/tree/HEAD/crates/symworx-spatialsym) | 2D trajectories and spatial decisions |
+| [`symworx-dynamics`](https://github.com/symworx/symworx/tree/HEAD/crates/symworx-dynamics) | RQA, embedding, entropy, DMD, SINDy |
+| [`symworx-signal`](https://github.com/symworx/symworx/tree/HEAD/crates/symworx-signal) | Filters, peaks, sparse sensing, Kalman family |
+| [`symworx-stats`](https://github.com/symworx/symworx/tree/HEAD/crates/symworx-stats) | Statistics and classical ML |
+| [`symworx-io`](https://github.com/symworx/symworx/tree/HEAD/crates/symworx-io) | Canonical signal / activity I/O |
+| [`symworx-embed`](https://github.com/symworx/symworx/tree/HEAD/crates/symworx-embed) | Host-side PPG streaming / simulator |
+| [`symworx-dbsym`](https://github.com/symworx/symworx/tree/HEAD/crates/symworx-dbsym) | Per-study / edge catalog |
 
-Also: [`symworx-core`](https://github.com/symworx/symworx/tree/develop/crates/symworx-core), [`symworx-math`](https://github.com/symworx/symworx/tree/develop/crates/symworx-math), [`symworx-loadsym-db`](https://github.com/symworx/symworx/tree/develop/crates/symworx-loadsym-db), [`symworx-backend`](https://github.com/symworx/symworx/tree/develop/crates/symworx-backend), [`symworx-error`](https://github.com/symworx/symworx/tree/develop/crates/symworx-error), and [Python bindings](https://github.com/symworx/symworx/tree/develop/bindings/python).
+Also: [`symworx-core`](https://github.com/symworx/symworx/tree/HEAD/crates/symworx-core), [`symworx-math`](https://github.com/symworx/symworx/tree/HEAD/crates/symworx-math), [`symworx-loadsym-db`](https://github.com/symworx/symworx/tree/HEAD/crates/symworx-loadsym-db), [`symworx-backend`](https://github.com/symworx/symworx/tree/HEAD/crates/symworx-backend), [`symworx-error`](https://github.com/symworx/symworx/tree/HEAD/crates/symworx-error), and [Python bindings](https://github.com/symworx/symworx/tree/HEAD/bindings/python).
 
 ## Philosophy
 
