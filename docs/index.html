@@ -3,10 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="/SymWorx — open computational tools for biosignal analysis, teaching, and the supporting toolchain."
-    />
+    <meta name="description" content="/SymWorx — open computational tools for biosignal analysis, teaching, and the supporting toolchain." />
     <title>/SymWorx</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230d1117'/%3E%3Cpath d='M8 22 L16 8 L24 22 Z' fill='none' stroke='%2358a6ff' stroke-width='2'/%3E%3Ccircle cx='16' cy='18' r='2' fill='%233fb950'/%3E%3C/svg%3E" />
@@ -16,14 +13,18 @@
     <header class="site-header">
       <a class="brand" href="./"><span class="slash">/</span>SymWorx</a>
       <nav>
-        <a href="#software">Software</a>
-        <a href="#analysis">Analysis</a>
-        <a href="#tui">TUI</a>
-        <a href="#contributors">Contributors</a>
+        <a href="./" aria-current="page">Software</a>
         <a class="btn" href="https://github.com/symworx">GitHub</a>
       </nav>
     </header>
-
+    <nav class="project-nav" aria-label="Projects">
+        <a href="symworx.html">symworx</a>
+        <a href="symkit.html">symkit</a>
+        <a href="symcourse.html">symcourse</a>
+        <a href="symelib.html">symelib</a>
+        <a href="symsight.html">symsight</a>
+        <a href="symjump.html">symjump</a>
+    </nav>
     <main>
       <aside class="release-banner" role="status">
         <strong>Public tools are Apache-2.0.</strong>
@@ -40,21 +41,11 @@
         </h1>
         <p class="lede">
           <strong>/SymWorx</strong> is the GitHub organization behind a small
-          set of tools: the <strong>analysis stack</strong>
-          (<a href="https://github.com/symworx/symworx">symworx/symworx</a>),
-          agent harnesses, a course scaffolder, a local paper library, an
-          insight generator, and a terminal jump list. Same defaults across
-          public repos: Apache-2.0, default branch <code>worx</code>.
-        </p>
-        <p class="focus-tags" aria-label="Software">
-          <span>analysis</span>
-          <span>teaching</span>
-          <span>papers</span>
-          <span>writing</span>
-          <span>terminal</span>
+          set of tools. Each project has its own page. Same defaults on public
+          repos: Apache-2.0, default branch <code>worx</code>.
         </p>
         <div class="cta-row">
-          <a class="btn primary" href="#software">Software</a>
+          <a class="btn primary" href="#software">Projects</a>
           <a class="btn ghost" href="https://github.com/symworx">github.com/symworx</a>
         </div>
       </section>
@@ -70,7 +61,7 @@
         </div>
         <ul class="project-grid">
           <li>
-            <a href="https://github.com/symworx/symworx">
+            <a href="symworx.html">
               <span class="name">symworx</span>
               <span class="tag">analysis stack</span>
               <span class="vis">public</span>
@@ -82,7 +73,7 @@
             </a>
           </li>
           <li>
-            <a href="https://github.com/symworx/symkit">
+            <a href="symkit.html">
               <span class="name">symkit</span>
               <span class="tag">agent harnesses</span>
               <span class="vis">public</span>
@@ -94,7 +85,7 @@
             </a>
           </li>
           <li>
-            <a href="https://github.com/symworx/symcourse">
+            <a href="symcourse.html">
               <span class="name">symcourse</span>
               <span class="tag">course scaffold</span>
               <span class="vis">private</span>
@@ -105,7 +96,7 @@
             </a>
           </li>
           <li>
-            <a href="https://github.com/symworx/symelib">
+            <a href="symelib.html">
               <span class="name">symelib</span>
               <span class="tag">paper library</span>
               <span class="vis">public</span>
@@ -116,7 +107,7 @@
             </a>
           </li>
           <li>
-            <a href="https://github.com/symworx/symsight">
+            <a href="symsight.html">
               <span class="name">symsight</span>
               <span class="tag">writing</span>
               <span class="vis">public</span>
@@ -127,7 +118,7 @@
             </a>
           </li>
           <li>
-            <a href="https://github.com/symworx/symjump">
+            <a href="symjump.html">
               <span class="name">symjump</span>
               <span class="tag">terminal</span>
               <span class="vis">public</span>
@@ -138,173 +129,6 @@
             </a>
           </li>
         </ul>
-      </section>
-
-      <section class="focus" id="analysis" aria-label="Analysis stack">
-        <div class="section-head">
-          <h2>Analysis stack</h2>
-          <p>
-            The
-            <a href="https://github.com/symworx/symworx">symworx/symworx</a>
-            repository is the science kernel: same methods from notebooks to
-            constrained devices. Default branch <code>worx</code>.
-          </p>
-        </div>
-        <div class="pillars focus-pillars">
-          <article>
-            <h2>Physiological &amp; biomechanical</h2>
-            <p>
-              Biosignals (PPG, respiration), gait and CPG models, training load
-              and multi-source performance time series, and spatial trajectory
-              analysis.
-            </p>
-          </article>
-          <article>
-            <h2>Classical ML &amp; stats</h2>
-            <p>
-              Logistic (binary/OVR), Naive Bayes, k-NN, rule lists, k-means,
-              metrics/ROC-AUC, plus OLS/Ridge/LDA/PCA behind optional linalg —
-              with model export for C, mobile, and web.
-            </p>
-          </article>
-          <article>
-            <h2>Nonlinear dynamics</h2>
-            <p>
-              RQA, entropy and complexity, embedding, DMD and SINDy, plus signal
-              foundations — filters, peaks, sparse sensing, and Kalman tools.
-            </p>
-          </article>
-          <article>
-            <h2>Embedded &amp; portable</h2>
-            <p>
-              Host-side streaming, a path toward microcontrollers, and the same
-              methods via Python for teaching and rapid prototyping.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="community tui-callout" id="tui" aria-label="Terminal UI">
-        <h2>Terminal UI · symview</h2>
-        <p>
-          Day-to-day interactive work in the analysis stack runs through
-          <code>symworx-tui</code> (binary <code>symview</code>). From
-          <strong>Home</strong>:
-        </p>
-        <ul class="workflow-list">
-          <li><strong>1 · BioSym</strong> — Import · Explore · Dynamics (RQA) · Generate</li>
-          <li><strong>2 · StatsSym</strong> — Import · <strong>Lab</strong> (classical ML / stats) · Generate</li>
-          <li><strong>3 · LoadSym</strong> — Workouts, calendar trends, load recommendations</li>
-          <li><strong>4 · SpatialSym</strong> — Trajectories, space metrics, decision views</li>
-        </ul>
-        <p class="community-note">From a local clone of <code>symworx/symworx</code>:</p>
-        <pre class="code-block"><code>cargo run -p symworx-tui --bin symview</code></pre>
-        <div class="cta-row">
-          <a
-            class="btn ghost"
-            href="https://github.com/symworx/symworx/tree/worx/crates/symworx-tui"
-            >symworx-tui on worx</a
-          >
-        </div>
-      </section>
-
-      <section class="projects" id="crates">
-        <div class="section-head">
-          <h2>Analysis crates</h2>
-          <p>
-            Domain and foundation crates inside
-            <a href="https://github.com/symworx/symworx">symworx/symworx</a>.
-          </p>
-        </div>
-        <ul class="project-grid">
-          <li>
-            <a href="https://github.com/symworx/symworx/tree/worx/crates/symworx-tui">
-              <span class="name">symworx-tui</span>
-              <span class="tag">TUI · symview</span>
-              <span class="desc"
-                >Interactive terminal UI: BioSym, StatsSym ML lab, LoadSym,
-                SpatialSym.</span
-              >
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/symworx/symworx/tree/worx/crates/symworx-stats">
-              <span class="name">symworx-stats</span>
-              <span class="tag">classical ML</span>
-              <span class="desc"
-                >Stats + ML: logistic, NB, k-NN, rules, k-means, PCA, model
-                export.</span
-              >
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/symworx/symworx/tree/worx/crates/symworx-biosym">
-              <span class="name">symworx-biosym</span>
-              <span class="tag">biology · biomechanics</span>
-              <span class="desc"
-                >PPG, respiration, gait analysis, and central pattern
-                generators.</span
-              >
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/symworx/symworx/tree/worx/crates/symworx-loadsym">
-              <span class="name">symworx-loadsym</span>
-              <span class="tag">training load</span>
-              <span class="desc"
-                >ACWR/TSS-style load, FIT, nutrition, and the symload CLI.</span
-              >
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/symworx/symworx/tree/worx/crates/symworx-dynamics">
-              <span class="name">symworx-dynamics</span>
-              <span class="tag">nonlinear dynamics</span>
-              <span class="desc"
-                >RQA, embedding, entropy, DMD, SINDy, and control tools.</span
-              >
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/symworx/symworx/tree/worx/crates/symworx-signal">
-              <span class="name">symworx-signal</span>
-              <span class="tag">signal processing</span>
-              <span class="desc"
-                >Filters, peaks, sparse sensing, Kalman family, resampling.</span
-              >
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/symworx/symworx/tree/worx/crates/symworx-spatialsym">
-              <span class="name">symworx-spatialsym</span>
-              <span class="tag">spatial analysis</span>
-              <span class="desc"
-                >2D trajectories and post-hoc spatial decision modeling.</span
-              >
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/symworx/symworx/tree/worx/crates/symworx-core">
-              <span class="name">symworx-core</span>
-              <span class="tag">foundation</span>
-              <span class="desc"
-                >Core re-exports and shared utilities across the stack.</span
-              >
-            </a>
-          </li>
-        </ul>
-        <p class="more-crates">
-          Also:
-          <a href="https://github.com/symworx/symworx/tree/worx/crates/symworx-io">io</a>,
-          <a href="https://github.com/symworx/symworx/tree/worx/crates/symworx-embed">embed</a>,
-          <a href="https://github.com/symworx/symworx/tree/worx/crates/symworx-dbsym">dbsym</a>,
-          <a href="https://github.com/symworx/symworx/tree/worx/crates/symworx-loadsym-db">loadsym-db</a>,
-          <a href="https://github.com/symworx/symworx/tree/worx/crates/symworx-math">math</a>,
-          <a href="https://github.com/symworx/symworx/tree/worx/crates/symworx-backend">backend</a>,
-          <a href="https://github.com/symworx/symworx/tree/worx/crates/symworx-error">error</a>,
-          and
-          <a href="https://github.com/symworx/symworx/tree/worx/bindings/python">Python bindings</a>.
-        </p>
       </section>
 
       <section class="pillars" aria-label="Principles">
@@ -352,16 +176,11 @@
           <a href="https://github.com/symworx/.github">.github</a> repository.
         </p>
         <div class="cta-row">
-          <a class="btn ghost" href="https://github.com/symworx/.github/blob/worx/.github/CONTRIBUTING.md"
-            >Contributing</a
-          >
-          <a class="btn ghost" href="https://github.com/symworx/.github/blob/worx/.github/SECURITY.md"
-            >Security</a
-          >
+          <a class="btn ghost" href="https://github.com/symworx/.github/blob/worx/.github/CONTRIBUTING.md">Contributing</a>
+          <a class="btn ghost" href="https://github.com/symworx/.github/blob/worx/.github/SECURITY.md">Security</a>
         </div>
       </section>
     </main>
-
     <footer class="site-footer">
       <p>
         <a href="https://github.com/symworx">github.com/symworx</a>

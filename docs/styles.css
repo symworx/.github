@@ -99,8 +99,47 @@ a:hover {
   font-size: 0.95rem;
 }
 
-.site-header nav a:not(.btn):hover {
+.site-header nav a:not(.btn):hover,
+.site-header nav a[aria-current="page"] {
   color: var(--text);
+}
+
+.project-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 1.5rem 0.5rem;
+  font-family: var(--mono);
+  font-size: 0.82rem;
+}
+
+.project-nav a {
+  color: var(--muted);
+}
+
+.project-nav a:hover,
+.project-nav a[aria-current="page"] {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.crumb {
+  max-width: var(--max);
+  margin: 0 auto 0.5rem;
+  padding: 0 1.5rem;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.crumb a {
+  color: var(--muted);
+}
+
+.crumb a:hover {
+  color: var(--link);
 }
 
 main {

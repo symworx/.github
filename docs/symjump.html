@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="symjump (sjmp) — pinned places and actions for a real terminal. Bash hook, toolbox / agent exec." />
+    <title>/SymWorx · symjump</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230d1117'/%3E%3Cpath d='M8 22 L16 8 L24 22 Z' fill='none' stroke='%2358a6ff' stroke-width='2'/%3E%3Ccircle cx='16' cy='18' r='2' fill='%233fb950'/%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <div class="bg" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="./"><span class="slash">/</span>SymWorx</a>
+      <nav>
+        <a href="./">Software</a>
+        <a class="btn" href="https://github.com/symworx">GitHub</a>
+      </nav>
+    </header>
+    <nav class="project-nav" aria-label="Projects">
+        <a href="symworx.html">symworx</a>
+        <a href="symkit.html">symkit</a>
+        <a href="symcourse.html">symcourse</a>
+        <a href="symelib.html">symelib</a>
+        <a href="symsight.html">symsight</a>
+        <a href="symjump.html" aria-current="page">symjump</a>
+    </nav>
+    <main>
+      <p class="crumb"><a href="./">/SymWorx</a> · terminal</p>
+      <section class="hero">
+        <p class="eyebrow">public · Apache-2.0 · worx · v0.1.0</p>
+        <h1>Terminal jump list</h1>
+        <p class="lede">
+          <strong>symjump</strong> (binary <code>sjmp</code>) is pinned places
+          and a few actions for a real terminal. Not an emulator, not a
+          project.el replacement, not git/docker aliases.
+          <code>eval "$(sjmp init bash)"</code> stays off when
+          <code>$INSIDE_EMACS</code> is set.
+        </p>
+        <div class="cta-row">
+          <a class="btn primary" href="https://github.com/symworx/symjump">Repository</a>
+        </div>
+      </section>
+      <section class="focus">
+        <div class="section-head">
+          <h2>Install</h2>
+        </div>
+        <pre class="code-block"><code>cargo install sjmp
+sjmp                       # writes ~/.config/symjump/favorites.toml
+eval "$(sjmp init bash)"   # jmp; binds M-p / M-P / M-x</code></pre>
+      </section>
+      <section class="pillars">
+        <article>
+          <h2>Places</h2>
+          <p>Favorites that travel across Kitty, foot, or a tmux pane without rewriting bashrc paths.</p>
+        </article>
+        <article>
+          <h2>Actions</h2>
+          <p>Toolbox destinations and agent exec. Meta bindings, not Control.</p>
+        </article>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <p>
+        <a href="https://github.com/symworx">github.com/symworx</a>
+        · public repos Apache-2.0
+      </p>
+    </footer>
+  </body>
+</html>
