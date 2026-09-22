@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="symelib (elib) — local PDF library with PubMed/Crossref metadata, search, and a TUI." />
+    <title>/SymWorx · symelib</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230d1117'/%3E%3Cpath d='M8 22 L16 8 L24 22 Z' fill='none' stroke='%2358a6ff' stroke-width='2'/%3E%3Ccircle cx='16' cy='18' r='2' fill='%233fb950'/%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <div class="bg" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="./"><span class="slash">/</span>SymWorx</a>
+      <nav>
+        <a href="./">Software</a>
+        <a class="btn" href="https://github.com/symworx">GitHub</a>
+      </nav>
+    </header>
+    <nav class="project-nav" aria-label="Projects">
+        <a href="symworx.html">symworx</a>
+        <a href="symkit.html">symkit</a>
+        <a href="symcourse.html">symcourse</a>
+        <a href="symelib.html" aria-current="page">symelib</a>
+        <a href="symsight.html">symsight</a>
+        <a href="symjump.html">symjump</a>
+    </nav>
+    <main>
+      <p class="crumb"><a href="./">/SymWorx</a> · papers</p>
+      <section class="hero">
+        <p class="eyebrow">public · Apache-2.0 · worx</p>
+        <h1>Local paper library</h1>
+        <p class="lede">
+          <strong>symelib</strong> (<code>elib</code>) is a local PDF / manuscript
+          manager: ingest, PubMed-primary then Crossref metadata, SQLite FTS5
+          search, and a TUI. Optional agents/RAG path via Postgres + pgvector.
+        </p>
+        <div class="cta-row">
+          <a class="btn primary" href="https://github.com/symworx/symelib">Repository</a>
+        </div>
+      </section>
+      <section class="pillars">
+        <article>
+          <h2>Ingest</h2>
+          <p>PDF processing (PyPDF2; optional GROBID). Library lives under <code>~/elibrary</code>.</p>
+        </article>
+        <article>
+          <h2>Metadata</h2>
+          <p>PubMed → Crossref → honest local fallback, with quality tracking.</p>
+        </article>
+        <article>
+          <h2>Search</h2>
+          <p>SQLite FTS5 plus metadata filters; <code>elib enrich</code> / <code>check-metadata</code>.</p>
+        </article>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <p>
+        <a href="https://github.com/symworx">github.com/symworx</a>
+        · public repos Apache-2.0
+      </p>
+    </footer>
+  </body>
+</html>
