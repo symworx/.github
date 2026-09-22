@@ -4,7 +4,9 @@ Open computational tools for **biosignal analysis**, **teaching**, and the suppo
 
 Public repositories are [Apache-2.0](https://github.com/symworx/symworx/blob/HEAD/LICENSE). The analysis kernel is in beta; sibling tools have their own release lines.
 
-Default branch for the software listed below is **`worx`** (GitHub Flow; tags on `worx`). Until the GitHub rename lands, clones still check out **`develop`**.
+Default branch for the software listed below is **`worx`** (GitHub Flow; tags on `worx`).
+
+Org site: **[/SymWorx](https://symworx.github.io/.github/)**.
 
 ## Software
 
@@ -15,7 +17,7 @@ Default branch for the software listed below is **`worx`** (GitHub Flow; tags on
 | [symcourse](https://github.com/symworx/symcourse) | Scaffold a course repository: layout, runtime, and identity. Agent packs come from [symkit](https://github.com/symworx/symkit). **Private.** |
 | [symelib](https://github.com/symworx/symelib) | Local paper library (`elib`): PDF ingest, PubMed / Crossref metadata, search, and a TUI. **Public.** |
 | [symsight](https://github.com/symworx/symsight) | Insight generator for articles and social posts. Rust core, CLI, Textual TUI, YAML brand files. **Public.** |
-| [symjump](https://github.com/symworx/symjump) | Terminal favorites and actions (`sjmp`): pinned places, toolbox / agent actions, bash hook. **Private.** |
+| [symjump](https://github.com/symworx/symjump) | Terminal favorites and actions (`sjmp`): pinned places, toolbox / agent actions, bash hook. **Public.** |
 
 The org site ([symworx-web](https://github.com/symworx/symworx-web), private) is not a product crate. Research manuscripts stay out of this org.
 
@@ -63,6 +65,7 @@ The long-term engine is **Rust**, with Python for teaching and rapid prototyping
 
 ## Get involved
 
+- **Site:** [/SymWorx](https://symworx.github.io/.github/)
 - **Org:** [github.com/symworx](https://github.com/symworx)
-- **Contributing:** [CONTRIBUTING.md](https://github.com/symworx/.github/blob/main/.github/CONTRIBUTING.md)
-- **Security:** [SECURITY.md](https://github.com/symworx/.github/blob/main/.github/SECURITY.md)
+- **Contributing:** [CONTRIBUTING.md](https://github.com/symworx/.github/blob/worx/.github/CONTRIBUTING.md)
+- **Security:** [SECURITY.md](https://github.com/symworx/.github/blob/worx/.github/SECURITY.md)

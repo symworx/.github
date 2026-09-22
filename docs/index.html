@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="/SymWorx — open computational tools for biosignal analysis, teaching, and the supporting toolchain." />
+    <title>/SymWorx</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230d1117'/%3E%3Cpath d='M8 22 L16 8 L24 22 Z' fill='none' stroke='%2358a6ff' stroke-width='2'/%3E%3Ccircle cx='16' cy='18' r='2' fill='%233fb950'/%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <div class="bg" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="./"><span class="slash">/</span>SymWorx</a>
+      <nav>
+        <a href="./" aria-current="page">Software</a>
+        <a class="btn" href="https://github.com/symworx">GitHub</a>
+      </nav>
+    </header>
+    <nav class="project-nav" aria-label="Projects">
+        <a href="symworx.html">symworx</a>
+        <a href="symkit.html">symkit</a>
+        <a href="symcourse.html">symcourse</a>
+        <a href="symelib.html">symelib</a>
+        <a href="symsight.html">symsight</a>
+        <a href="symjump.html">symjump</a>
+    </nav>
+    <main>
+      <aside class="release-banner" role="status">
+        <strong>Public tools are Apache-2.0.</strong>
+        Default branch is <code>worx</code> (GitHub Flow; tags on
+        <code>worx</code>). The analysis stack is in public beta (v0.4.2).
+        Sibling tools have their own release lines.
+      </aside>
+
+      <section class="hero">
+        <p class="eyebrow">Org · Rust + Python · teaching + analysis</p>
+        <h1>
+          Open computational tools for<br />
+          <span class="gradient">analysis, teaching, and workflow</span>
+        </h1>
+        <p class="lede">
+          <strong>/SymWorx</strong> is the GitHub organization behind a small
+          set of tools. Each project has its own page. Same defaults on public
+          repos: Apache-2.0, default branch <code>worx</code>.
+        </p>
+        <div class="cta-row">
+          <a class="btn primary" href="#software">Projects</a>
+          <a class="btn ghost" href="https://github.com/symworx">github.com/symworx</a>
+        </div>
+      </section>
+
+      <section class="projects" id="software">
+        <div class="section-head">
+          <h2>Software</h2>
+          <p>
+            Product repositories in
+            <a href="https://github.com/symworx">github.com/symworx</a>.
+            Research manuscripts stay out of this catalog.
+          </p>
+        </div>
+        <ul class="project-grid">
+          <li>
+            <a href="symworx.html">
+              <span class="name">symworx</span>
+              <span class="tag">analysis stack</span>
+              <span class="vis">public</span>
+              <span class="desc"
+                >Biosignals, training load, nonlinear dynamics, classical ML.
+                Rust kernel, Python bindings, keyboard-driven TUI
+                (<strong>symview</strong>).</span
+              >
+            </a>
+          </li>
+          <li>
+            <a href="symkit.html">
+              <span class="name">symkit</span>
+              <span class="tag">agent harnesses</span>
+              <span class="vis">public</span>
+              <span class="desc"
+                >Install shared policies into teaching, research, creative, and
+                engineering repos for Grok, Claude Code, Codex, and similar
+                tools.</span
+              >
+            </a>
+          </li>
+          <li>
+            <a href="symcourse.html">
+              <span class="name">symcourse</span>
+              <span class="tag">course scaffold</span>
+              <span class="vis">private</span>
+              <span class="desc"
+                >Layout, runtime, and identity for a course repository. Agent
+                packs come from symkit. Default is university-agnostic.</span
+              >
+            </a>
+          </li>
+          <li>
+            <a href="symelib.html">
+              <span class="name">symelib</span>
+              <span class="tag">paper library</span>
+              <span class="vis">public</span>
+              <span class="desc"
+                >Local PDF library (<code>elib</code>): ingest, PubMed /
+                Crossref metadata, search, and a TUI.</span
+              >
+            </a>
+          </li>
+          <li>
+            <a href="symsight.html">
+              <span class="name">symsight</span>
+              <span class="tag">writing</span>
+              <span class="vis">public</span>
+              <span class="desc"
+                >Insight generator for articles and social posts. Rust core,
+                CLI, Textual TUI, YAML brand files.</span
+              >
+            </a>
+          </li>
+          <li>
+            <a href="symjump.html">
+              <span class="name">symjump</span>
+              <span class="tag">terminal</span>
+              <span class="vis">public</span>
+              <span class="desc"
+                >Pinned places and actions (<code>sjmp</code>): jump list,
+                toolbox / agent exec, bash hook. Not an emulator plugin.</span
+              >
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="pillars" aria-label="Principles">
+        <article>
+          <h2>Security</h2>
+          <p>
+            Minimize unsafe code, reduce unintended execution paths, and lower
+            supply-chain risk.
+          </p>
+        </article>
+        <article>
+          <h2>Robustness</h2>
+          <p>
+            Predictable behavior, strong typing, and explicit error handling
+            across the stack.
+          </p>
+        </article>
+        <article>
+          <h2>Scalability</h2>
+          <p>
+            One kernel for analysis, simulation, classical ML, and portable
+            inference.
+          </p>
+        </article>
+      </section>
+
+      <section class="community" id="contributors">
+        <h2>Contributors</h2>
+        <p>
+          /SymWorx software is developed by people building tools for
+          performance, modeling, teaching, and systems work.
+        </p>
+        <ul class="contributor-list">
+          <li>
+            <a href="https://github.com/ntberry" rel="noopener noreferrer">ntberry</a>
+            <span class="url">github.com/ntberry</span>
+          </li>
+          <li>
+            <a href="https://www.cSYMd.com" rel="noopener noreferrer">cSYMd</a>
+            <span class="url">www.cSYMd.com</span>
+          </li>
+        </ul>
+        <p class="community-note">
+          Community defaults live in this
+          <a href="https://github.com/symworx/.github">.github</a> repository.
+        </p>
+        <div class="cta-row">
+          <a class="btn ghost" href="https://github.com/symworx/.github/blob/worx/.github/CONTRIBUTING.md">Contributing</a>
+          <a class="btn ghost" href="https://github.com/symworx/.github/blob/worx/.github/SECURITY.md">Security</a>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <p>
+        <a href="https://github.com/symworx">github.com/symworx</a>
+        · public repos Apache-2.0
+      </p>
+    </footer>
+  </body>
+</html>
