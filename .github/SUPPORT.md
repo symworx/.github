@@ -11,7 +11,7 @@
 
 ## Software
 
-Public and private tools in this org (default branch **`develop`** unless noted):
+Public and private tools in this org (default branch **`worx`**):
 
 | Repository | Role |
 |------------|------|
@@ -20,7 +20,7 @@ Public and private tools in this org (default branch **`develop`** unless noted)
 | [symcourse](https://github.com/symworx/symcourse) | Course repository scaffolder (private) |
 | [symelib](https://github.com/symworx/symelib) | Local paper library (`elib`) |
 | [symsight](https://github.com/symworx/symsight) | Article / social insight generator |
-| [symjump](https://github.com/symworx/symjump) | Terminal jump list (`sjmp`, private) |
+| [symjump](https://github.com/symworx/symjump) | Terminal jump list (`sjmp`) |
 
 The analysis monorepo is in beta. Use that repo for biosignal / stats / TUI questions; do not file those on sibling tools.
 
