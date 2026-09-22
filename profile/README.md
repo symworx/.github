@@ -6,7 +6,7 @@ Public repositories are [Apache-2.0](https://github.com/symworx/symworx/blob/HEA
 
 Default branch for the software listed below is **`worx`** (GitHub Flow; tags on `worx`).
 
-Project site for the analysis stack: **[/SymWorx](https://symworx.github.io/symworx/)**.
+Org site: **[/SymWorx](https://symworx.github.io/.github/)**.
 
 ## Software
 
@@ -65,7 +65,7 @@ The long-term engine is **Rust**, with Python for teaching and rapid prototyping
 
 ## Get involved
 
-- **Project site:** [/SymWorx](https://symworx.github.io/symworx/)
+- **Site:** [/SymWorx](https://symworx.github.io/.github/)
 - **Org:** [github.com/symworx](https://github.com/symworx)
-- **Contributing:** [CONTRIBUTING.md](https://github.com/symworx/.github/blob/main/.github/CONTRIBUTING.md)
-- **Security:** [SECURITY.md](https://github.com/symworx/.github/blob/main/.github/SECURITY.md)
+- **Contributing:** [CONTRIBUTING.md](https://github.com/symworx/.github/blob/worx/.github/CONTRIBUTING.md)
+- **Security:** [SECURITY.md](https://github.com/symworx/.github/blob/worx/.github/SECURITY.md)

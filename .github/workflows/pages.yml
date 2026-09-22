@@ -4,7 +4,8 @@ on:
   push:
     branches: [worx]
     paths:
-      - "docs/**"
+      - "docs/index.html"
+      - "docs/styles.css"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 
